@@ -1,0 +1,8 @@
+services:
+  reels-bot:
+    build: .
+    restart: unless-stopped
+    env_file: .env
+    volumes:
+      - ./videos:/app/videos
+      - ./data:/app/data
